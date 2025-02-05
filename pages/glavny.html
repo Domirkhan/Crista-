@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.webp" type="image/x-icon">
+    <title>CRISTAL VIEW</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+        <nav class="navbar">
+         <img src="/img/logo.webp" alt="logo" width="40px" class="logo_img">
+         <div class="logo"><a href="/pages/glavny.html">CRISTAL VIEW</a></div>
+            <ul class="menu">
+                <li><a href="#tov">ТОВАРЫ</a></li>
+                <li><a href="#kon">КОНТАКТЫ</a></li>
+                <li><a href="#pro">ПРО НАС</a></li>
+            </ul>
+            <div class="cart-icon">
+              <a href="/pages/cart.html">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cart-count">0</span>
+              </a>  
+          </div>
+           
+            <div class="cart-icon">
+                <a id="user-icon"><img src="/img/user 1.png" alt="" id="login-button" > </a>
+            </div>
+            <div class="header__auth">
+              <div id="profile-section" class="hidden">
+                  <div class="profile-dropdown">
+                      <button class="profile-button">
+                          <img src="https://placehold.co/32x32" alt="Profile" class="profile-avatar">
+                          <span id="profile-name"></span>
+                      </button>
+                      <div class="dropdown-content">
+                          <a href="#" id="logout-button">Выйти</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </nav>
+
+  </div>
+</header>
+    <main class="main-content">
+        <section class="banner">
+            <div class="text">
+                <h1>Новый взгляд <br>на мир с <br>CRISTAL VIEW</h1>
+                <button class="btn"><a href="#tov">ВЫБРАТЬ ОЧКИ</a></button>
+            </div>
+        </section>
+    </main>
+<div class="container" id="tov">
+    <section class="products">
+        <h2 class="products-title">НАШИ ТОВАРЫ</h2>
+        <p class="products-subtitle">Выберите свой идеальный стиль из нашей премиальной коллекции</p>
+        <div class="filters">
+          <button class="filter-button active" data-category="all">Все</button>
+          <button class="filter-button" data-category="sunglasses">СОЛНЕЧНЫЕ ОЧКИ</button>
+          <button class="filter-button" data-category="optical">ЛИНЗЫ</button>
+          <button class="filter-button" data-category="sport">АКСЕССУАРЫ</button>
+        </div>
+        <div class="product-list">
+
+          <!-- Пример карточки товара -->
+          <div class="product-card" data-category="sunglasses" >
+            <img src="/img/o1.png" alt="Classic Aviator" class="product-image">
+            <p><a href="/pages/menu.html">Zeal | Black Round </a></p><br>
+            <p class="product-price">12,990тг</p>
+            <button onclick="addToCart('Zeal | Black Round Sunglasses MG3770', 12990)">Добавить в корзину</button>
+        </div>     
+          <div class="product-card" data-category="optical" >
+            <img src="/img/LINZ.jpg" alt="Sunglasses" >
+            <p><a href="/pages/menu_linz.html">Air Optix Aqua</a> </p> <br>
+            <p class="product-price">11,990тг</p>
+            <button onclick="addToCart('Air Optix Aqua', 11990)">Добавить в корзину</button>
+        </div>
+        <div class="product-card" data-category="sport">
+            <img src="/img/fut.jpg" alt="Sunglasses" >
+            <p><a href="/pages/menu_aces.html">Футляр для очков</a> </p> <br>
+            <p class="product-price">13,990тг</p>
+            <button onclick="addToCart('Футляр для очков Vision', 13990)">Добавить в корзину</button>
+        </div>
+          <div class="product-card" data-category="sunglasses" >
+            <img src="/img/o1.png" alt="Classic Aviator" class="product-image">
+            <p><a href="/pages/menu.html">Zeal | Black Round </a></p> <br>
+            <p class="product-price">12,990тг</p>
+            <button onclick="addToCart('Zeal | Black Round Sunglasses MG3770', 12990)">Добавить в корзину</button>
+        </div>     
+          <div class="product-card" data-category="optical" >
+            <img src="/img/LINZ.jpg" alt="Sunglasses" >
+            <p><a href="/pages/menu_linz.html">Air Optix Aqua</a> </p> <br>
+            <p class="product-price">11,990тг</p>
+            <button onclick="addToCart('Air Optix Aqua', 11990)">Добавить в корзину</button>
+        </div>
+        <div class="product-card" data-category="sport">
+            <img src="/img/fut.jpg" alt="Sunglasses" >
+            <p><a href="/pages/menu_aces.html">Футляр для очков</a> </p> <br>
+            <p class="product-price">13,990тг</p>
+            <button onclick="addToCart('Футляр для очков Vision', 13990)">Добавить в корзину</button>
+        </div>
+          
+        </div>
+      </section>
+      <h2 class="products-title"id="pro">О НАС</h2>
+      <section class="about-us">
+        <div class="about-image">
+            <img src="/img/модел2.png" alt="История магазина">
+          </div>
+        <div class="about-content">
+          <h2 class="about-title">Почему выбирают Cristal View?</h2>
+          <ul class="mission-list">
+            <li>Качество и инновации: Мы используем только лучшие материалы и современные технологии производства.</li>
+            <li>Долговечность: Линзы и оправы Cristal View отличаются высокой износостойкостью и устойчивостью к царапинам.</li>
+            <li>Забота о здоровье: Наши линзы обладают защитой от ультрафиолетового излучения, что делает их идеальным выбором для солнечных дней.</li>
+        </ul>
+        </div>
+      </section>
+      <section class="mission">
+        <div class="mission-content">
+          <h2 class="mission-title">Что делает нас уникальными?</h2>
+          <ul class="mission-list">
+            <li>Идеальная прозрачность: Линзы Cristal View изготавливаются с использованием современных технологий, обеспечивающих кристально чистое зрение.</li>
+            <li>Антибликовое покрытие: Наши очки защищают от отражений и делают использование гаджетов или вождение более комфортным.</li>
+            <li>Фильтрация синего света: Мы заботимся о вашем зрении, предлагая линзы, снижающие нагрузку на глаза при работе за компьютером.</li>
+          </ul>
+        </div>
+        <div class="mission-image">
+          <img src="/img/модел3.png" alt="Миссия компании">
+        </div>
+      </section>
+      <h2 class="products-title">КОНТАКТЫ</h2>
+        <div class="contacts-section" id="kon">
+            <p >Свяжитесь с нами или посетите наш магазин</p>
+            <div class="contacts">
+                <div class="contact-item">
+                    <span class="icon phone-icon"><img src="/img/icons8-телефон-50.png" alt=""></span>
+                    <h3>Телефон</h3>
+                    <p><a href="https://wa.me/+77054541349">+7 (705) 454 13 49</a></p>
+                </div>
+                <div class="contact-item">
+                    <span class="icon email-icon"><img src="/img/icons8-почта-50.png" alt=""></span>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@opticstyle.ru">info@opticstyle.ru</a></p>
+                </div>
+                <div class="contact-item">
+                    <span class="icon address-icon"><img src="/img/icons8-адрес-50.png" alt=""></span>
+                    <h3>Адрес</h3>
+                    <p><a href="https://2gis.kz/zhezkazgan?m=67.767229%2C47.769156%2F13.3%2Fr%2F-57.45">ул. Примерная, 123, Жезказган</a> </p>
+                </div>
+            </div>
+        </div>
+</div>
+    <!-- Login Modal -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>РЕГИСТРАЦИЯ</h2>
+      <form id="login-form">
+          <div class="form-group">
+              <label for="login-name">Имя:</label>
+              <input type="text" id="login-name" required>
+          </div>
+          <div class="form-group">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" required>
+          </div>
+          <div class="form-group">
+              <label for="login-password">Пароль:</label>
+              <input type="password" id="login-password" required>
+          </div>
+          <button type="submit" class="submit-button">Войти</button>
+      </form>
+  </div>
+</div>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/user.js"></script>
+    
+</body>
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; 2024 Ваш сайт. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+</html>

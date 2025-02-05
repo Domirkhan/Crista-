@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/logo.webp" type="image/x-icon">
+        <title>CRISTAL VIEW</title>
+        <link rel="stylesheet" href="/css/kor.css">
+        <link rel="stylesheet" href="/css/user.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+             <img src="/img/logo.webp" alt="logo" width="40px" class="logo_img">
+             <div class="logo"><a href="/pages/glavny.html">CRISTAL VIEW</a></div>
+                <ul class="menu">
+                    <li><a href="#tov">ТОВАРЫ</a></li>
+                    <li><a href="#kon">КОНТАКТЫ</a></li>
+                    <li><a href="#pro">ПРО НАС</a></li>
+                </ul>
+                <div class="cart-icon">
+                  <a href="/pages/cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <span id="cart-count">0</span>
+                  </a>  
+              </div>
+               
+                <div class="cart-icon">
+                    <a id="user-icon"><img src="/img/user 1.png" alt="" id="login-button" > </a>
+                </div>
+                <div class="header__auth">
+                  <div id="profile-section" class="hidden">
+                      <div class="profile-dropdown">
+                          <button class="profile-button">
+                              <img src="https://placehold.co/32x32" alt="Profile" class="profile-avatar">
+                              <span id="profile-name"></span>
+                          </button>
+                          <div class="dropdown-content">
+                              <a href="#" id="logout-button">Выйти</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </nav>
+    
+      </div>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h1>КОРЗИНА</h1>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-summary">
+                <div class="promo-code">
+                    <input type="text" placeholder="Введите промокод">
+                </div>
+                <div class="total">
+                    <p>Сумма заказа: <span id="total-amount">0</span> ₸</p> <br>
+                    <p>Итого: <span id="final-amount">0</span> ₸</p>
+                </div>
+                <button class="checkout-btn">Оформить заказ</button>
+            </div>
+            <div class="delivery-info">
+                <h3>Информация о доставке</h3>
+                <p>Бесплатная доставка по Казахстану при заказе от 25 000 тг.</p>
+            </div>
+            <div class="return-info">
+                <h3>Информация о возврате</h3>
+                <p>Возврат товара возможен в течение 14 дней со дня получения товара.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/cart.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/user.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; 2024 Ваш сайт. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+</html>

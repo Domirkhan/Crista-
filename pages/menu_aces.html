@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/logo.webp" type="image/x-icon">
+        <title>CRISTAL VIEW</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/user.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+             <img src="/img/logo.webp" alt="logo" width="40px" class="logo_img">
+             <div class="logo"><a href="/pages/glavny.html">CRISTAL VIEW</a></div>
+                <ul class="menu">
+                    <li><a href="#tov">ТОВАРЫ</a></li>
+                    <li><a href="#kon">КОНТАКТЫ</a></li>
+                    <li><a href="#pro">ПРО НАС</a></li>
+                </ul>
+                <div class="cart-icon">
+                  <a href="/pages/cart.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      <span id="cart-count">0</span>
+                  </a>  
+              </div>
+               
+                <div class="cart-icon">
+                    <a id="user-icon"><img src="/img/user 1.png" alt="" id="login-button" > </a>
+                </div>
+                <div class="header__auth">
+                  <div id="profile-section" class="hidden">
+                      <div class="profile-dropdown">
+                          <button class="profile-button">
+                              <img src="https://placehold.co/32x32" alt="Profile" class="profile-avatar">
+                              <span id="profile-name"></span>
+                          </button>
+                          <div class="dropdown-content">
+                              <a href="#" id="logout-button">Выйти</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </nav>
+    
+      </div>
+    </header>
+  <div class="prod-container">
+      <!-- Галерея миниатюр слева -->
+      <div class="thumbnails">
+          <img src="/img/fut.jpg" alt="Футляр 1" class="thumbnail active" onclick="changeImage(this)">
+          <img src="/img/fut2.png" alt="Футляр 2" class="thumbnail" onclick="changeImage(this)">
+          <img src="/img/fut.jpg" alt="Футляр 3" class="thumbnail" onclick="changeImage(this)">
+          <img src="/img/fut3.png" alt="Футляр 4" class="thumbnail" onclick="changeImage(this)">
+      </div>
+      <!-- Основное изображение -->
+      <div class="main-image">
+          <img src="/img/fut.jpg" id="current-image" alt="Основное изображение">
+      </div>
+      <!-- Описание товара -->
+      <div class="product-details">
+          <h1>Футляр для очков</h1>
+          <p><strong>Цвет:</strong> коричневый</p>
+          <!-- Выбор цвета -->
+          <div class="color-options">
+              <img src="/img/black.webp" alt="Черный" class="color-option">
+              <img src="/img/roz.webp" alt="Розовый" class="color-option">
+              <img src="/img/ceriu.webp" alt="Серый" class="color-option active">
+          </div>
+          <ul class="features">
+              <li><strong>Материал изделия:</strong> искусственная кожа</li>
+              <li><strong>Декоративные элементы:</strong> пряжки, ремень, кнопка</li>
+              <li><strong>Страна производства:</strong> Китай</li>
+              <li><strong>Комплектация:</strong> чехол, ремешки</li>
+              <li><strong>Высота предмета:</strong> 10 см</li>
+              <li><strong>Глубина предмета:</strong> 2 см</li>
+          </ul>
+           <!-- Цена товара -->
+        <p class="price">13990 ₸</p>
+        <!-- Кнопка добавления в корзину -->
+        <button onclick="addToCart('Футляр для очков Vision', 13990)">Добавить в корзину</button>
+        
+      </div>
+  </div>
+  <div class="tabs">
+    <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab(event, 'description')">Описание</button>
+        <button class="tab-button" onclick="openTab(event, 'characteristics')">Характеристики</button>
+        <button class="tab-button" onclick="openTab(event, 'delivery')">Доставка и оплата</button>
+    </div>
+    <div class="tab-content active" id="description">
+        <p>Солнцезащитные очки Ocean. Очки в ярком дизайне с черным ободком, черными линзами 3 категории и широкими цветными дужками для большого нанесения. Соответствуют стандартам EN ISO 12312-1 и UV400. ПП пластик.</p>
+    </div>
+    <div class="tab-content" id="characteristics">
+        <p>Материал: Пластик.<br>Категория линз: 3.<br>Стандарты: EN ISO 12312-1, UV400.</p>
+    </div>
+    <div class="tab-content" id="delivery">
+        <p>Доставка осуществляется в течение 3-5 рабочих дней. Оплата возможна картой или наличными при получении.</p>
+    </div>
+  </div>
+  <div class="reviews-container">
+    <div class="leave-review">
+        <h2>Оставить отзыв</h2>
+        <div class="rating">
+            <span data-value="1" class="star">★</span>
+            <span data-value="2" class="star">★</span>
+            <span data-value="3" class="star">★</span>
+            <span data-value="4" class="star">★</span>
+            <span data-value="5" class="star">★</span>
+        </div>
+        <textarea placeholder="Поделитесь своими впечатлениями..."></textarea>
+        <button id="submit-review" class="sumbit-review">Отправить отзыв</button>
+    </div>
+    <div class="reviews-list">
+        <h2>Отзывы наших клиентов</h2>
+        <p>Узнайте, что говорят о нас наши клиенты</p>
+        <div class="review">
+            <div class="review-header">
+                <span class="name">Анна Петрова</span>
+                <span class="date">15.03.2024</span>
+            </div>
+            <div class="rating">★★★★★</div>
+            <p>Отличный сервис! Профессиональный подход и внимательное отношение к клиентам.</p>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span class="name">Иван Смирнов</span>
+                <span class="date">10.03.2024</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+            <p>Хороший выбор оправ, квалифицированные специалисты. Немного высокие цены.</p>
+        </div>
+    </div>
+  </div>
+      <script src="/js/script.js"></script>
+      <script src="/js/cart.js"></script>
+      <script src="/js/user.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; 2024 CRISTAL VIEW. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+</html>
